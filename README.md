@@ -16,6 +16,18 @@ campusconnect-part1-database/
 └── transactions.sql
 ```
 
+## Database Design
+
+The database is designed for the CampusConnect platform using five normalized tables:
+
+- **Departments**: Stores department information.
+- **Students**: Stores student details and links each student to a department.
+- **Instructors**: Stores instructor details and associates each instructor with a department.
+- **Courses**: Stores course information and assigns an instructor to each course.
+- **Enrollments**: Acts as a junction table between students and courses, recording enrollment details and grades.
+
+This design eliminates data redundancy, maintains referential integrity using foreign keys, and satisfies Third Normal Form (3NF).
+
 ## How to Run
 
 1. Create a new SQLite database:
